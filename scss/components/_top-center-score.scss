@@ -82,13 +82,6 @@
     transform: translate(px-to-vw(-16), px-to-vh(-10));
 }
 
-// .side-indicator.ct.transition:hover {           // видалити
-//     border-radius: px-to-vw(8);
-//     width: px-to-vw(280);
-//     height: px-to-vh(50);
-//     transform: translate(px-to-vw(16), px-to-vh(-10));
-// }
-
 .team-name > p
 {
     position: absolute;
@@ -114,9 +107,14 @@
     transition: 1.0s;
 }
 
-.team-name > p.transition
+.team-name.ct-name > p.transition
 {
     mask-position: 110% 0%;
+}
+
+.team-name.t-name > p.transition
+{
+    mask-position: -110% 0%;
 }
 
 .team-logo {
@@ -202,10 +200,10 @@
     flex-direction: column;
 }
 
-.timer-status > img
+.timer-status > svg
 {
-    max-width: 100%;
-    max-height: 100%;
+    height: 100%;
+    fill: white;
 }
 
 .timer-text,

@@ -63,9 +63,11 @@
     gap: px-to-vw(2);
 }
 
-.active-player-body-info>img {
+.active-player-body-info>svg {
     max-width: px-to-vw(14);
     max-height: px-to-vw(14);
+
+    fill: white;
 }
 
 .active-player-body-info>p {
@@ -87,7 +89,9 @@
     font-weight: 400;
 }
 
-.active-player-bullets>img {
+.active-player-bullets>svg {
     max-width: px-to-vw(13);
     max-height: px-to-vh(13);
+
+    fill: white;
 }

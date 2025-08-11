@@ -153,9 +153,11 @@
     left: px-to-vw(100);
 }
 
-.player-item>img {
+.player-item>svg {
     max-width: 60%;
     max-height: 60%;
+
+    fill: white;
 }
 
 .player-item>p {
@@ -278,7 +280,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('../../media/graphic-background-pattern.svg');
+    background-image: url('../../media/graphic-elements/graphic-background-pattern.svg');
     background-size: 13%;
     opacity: 0.15;
 }
@@ -294,8 +296,10 @@
     z-index: 2;
 }
 
-.player-health-n-armor img {
+.player-health-n-armor svg {
     max-width: px-to-vw(14);
+
+    fill: white;
 }
 
 .player-health-n-armor>p {
@@ -310,19 +314,23 @@
     position: relative;
 }
 
-.player-armor-n-helmet > img
+.player-armor-n-helmet > svg
 {
     max-width: 100%;
     max-height: 100%;
+
+    fill: none;
+    stroke: white;
 }
 
-.player-armor-n-helmet img:nth-child(2) {
-    // max-width: px-to-vw(7.6);
+.player-armor-n-helmet svg:nth-child(2) {
     max-width: 100%;
-        max-height: 100%;
+    max-height: 100%;
 
     position: absolute;
-    // margin-top: -16%;
+
+    fill: white;
+    stroke: none;
 }
 
 .player-nickname {
@@ -350,10 +358,10 @@
     gap: px-to-vw(5);
 }
 
-.kills-n-deaths-values > img
+.kills-n-deaths-values > svg
 {
-    max-width: px-to-vw(15);
-    // max-height: px-to-vh(15);
+    width: px-to-vw(15);
+    fill: white;
 
     aspect-ratio: 1;
 }

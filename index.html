@@ -8,10 +8,10 @@
   </head>
   <body>
     <div class="minimap">
-      <img src="./media/de_mirage_radar_psd.png" alt="" />
+      <img src="./media/map-images/de_mirage_radar.png" alt="" />
     </div>
     <div class="top-center-score flex-all-center absolute-horizontal-center">
-      <div class="team-name">
+      <div class="team-name ct-name">
         <div class="team-name-textbox ct-team flex-all-center">
           <p class="team-name-text">Natus Vincere</p>
         </div>
@@ -35,12 +35,14 @@
       <div class="timer flex-all-center">
         <div class="timer-status flex-all-center">
           <p class="timer-text">01:60</p>
-          <img class="display-none" src="./media/c4-icon.svg" alt="" />
-          <img
-            class="display-none"
-            src="./media/expired-timer-icon.svg"
-            alt=""
-          />
+          <svg class="display-none">
+            <use href="./media/player-icons/player-icons.svg#c4"></use>
+          </svg>
+          <svg class="display-none">
+            <use
+              href="./media/player-icons/player-icons.svg#expired-timer"
+            ></use>
+          </svg>
         </div>
         <p class="round-name">ROUND</p>
         <p class="round-number">24/24</p>
@@ -59,20 +61,24 @@
           alt=""
         />
       </div>
-      <div class="team-name">
-        <div class="side-indicator t"></div>
+      <div class="team-name t-name">
         <div class="team-name-textbox t-team flex-all-center">
           <p class="team-name-text">Ninjas in Pijamas</p>
         </div>
+        <div class="side-indicator t transition"></div>
+        <p id="team-name-win-text" class="transition">Round win</p>
       </div>
     </div>
     <div class="advertisement flex-all-center">
       <div class="advertisement-media flex-all-center">
-        <img src="./media/KPI-Cybersport-logo-typescript-white.png" alt="" />
+        <img
+          src="./media/graphic-elements/KPI-Cybersport-logo-typescript-white.png"
+          alt=""
+        />
       </div>
       <img
         class="advertisement-background"
-        src="./media/advertisiment-background.png"
+        src="./media/graphic-elements/advertisiment-background.png"
         alt=""
       />
     </div>
@@ -82,9 +88,8 @@
       >
         <div class="background-container flex-all-center">
           <div class="planted-bomb-image planted-status flex-all-center">
-            <!-- <img src="./media/c4-icon.svg" alt="" /> -->
             <svg>
-              <use href="./media/player-icons.svg#c4"></use>
+              <use href="./media/player-icons/player-icons.svg#c4"></use>
             </svg>
           </div>
           <p>00:40</p>
@@ -127,11 +132,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item flex-all-center">
-                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#defuse-kit"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item flex-all-center">
@@ -143,21 +152,41 @@
                   <div class="player-health-bar ct-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -168,12 +197,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center ct-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -198,11 +230,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item flex-all-center">
-                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#defuse-kit"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item flex-all-center">
@@ -214,21 +250,41 @@
                   <div class="player-health-bar ct-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -239,12 +295,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center ct-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -269,11 +328,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item flex-all-center">
-                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#defuse-kit"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item flex-all-center">
@@ -285,21 +348,41 @@
                   <div class="player-health-bar ct-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -310,12 +393,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center ct-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -340,11 +426,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item flex-all-center">
-                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#defuse-kit"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item flex-all-center">
@@ -356,21 +446,41 @@
                   <div class="player-health-bar ct-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -381,12 +491,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center ct-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -411,11 +524,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item flex-all-center">
-                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#defuse-kit"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item flex-all-center">
@@ -427,21 +544,41 @@
                   <div class="player-health-bar ct-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -452,12 +589,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center ct-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -466,22 +606,34 @@
       <div class="active-player-space flex-all-center">
         <div class="active-player-view background-pattern flex-all-center">
           <div class="active-player-view-background"></div>
-          <img src="./media/player_silhouette.png" alt="" />
+          <img src="./media/graphic-elements/player_silhouette.png" alt="" />
         </div>
         <div class="active-player-bottom-info flex-all-center">
           <div class="active-player-body-info flex-all-center">
-            <img src="./media/player-health-icon.svg" alt="" />
+            <svg>
+              <use href="./media/player-icons/player-icons.svg#health"></use>
+            </svg>
             <p>100</p>
             <div class="player-armor-n-helmet flex-all-center">
-              <img src="./media/player-armor-icon.svg" alt="" />
-              <img src="./media/player-helmet-icon.svg" alt="" />
+              <svg>
+                <use href="./media/player-icons/player-icons.svg#armor"></use>
+              </svg>
+              <svg>
+                <use href="./media/player-icons/player-icons.svg#helmet"></use>
+              </svg>
             </div>
-            <img src="./media/ui_icons/defuser.svg" alt="" />
+            <svg>
+              <use
+                href="./media/player-icons/player-icons.svg#defuse-kit"
+              ></use>
+            </svg>
           </div>
           <div class="active-player-nickname">Player</div>
           <div class="active-player-bullets flex-all-center">
             <p>20/90</p>
-            <img src="./media/player-bullets-icon.svg" alt="" />
+            <svg>
+              <use href="./media/player-icons/player-icons.svg#bullets"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -506,11 +658,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item t-border flex-all-center">
-                  <img src="./media/bomb-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#bomb"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item t-border flex-all-center">
@@ -522,21 +678,41 @@
                   <div class="player-health-bar t-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -547,12 +723,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center t-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -577,11 +756,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item t-border flex-all-center">
-                  <img src="./media/bomb-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#bomb"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item t-border flex-all-center">
@@ -593,21 +776,41 @@
                   <div class="player-health-bar t-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -618,12 +821,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center t-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -648,11 +854,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item t-border flex-all-center">
-                  <img src="./media/bomb-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#bomb"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item t-border flex-all-center">
@@ -664,21 +874,41 @@
                   <div class="player-health-bar t-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -689,12 +919,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center t-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -719,11 +952,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item t-border flex-all-center">
-                  <img src="./media/bomb-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#bomb"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item t-border flex-all-center">
@@ -735,21 +972,41 @@
                   <div class="player-health-bar t-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -760,12 +1017,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center t-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -790,11 +1050,15 @@
             <div class="player-card-state">
               <div class="player-item-photo-kills">
                 <div class="player-item t-border flex-all-center">
-                  <img src="./media/bomb-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#bomb"
+                    ></use>
+                  </svg>
                 </div>
                 <img
                   class="absolute-horizontal-center"
-                  src="./media/player_silhouette.png"
+                  src="./media/graphic-elements/player_silhouette.png"
                   alt=""
                 />
                 <div class="player-item t-border flex-all-center">
@@ -806,21 +1070,41 @@
                   <div class="player-health-bar t-bar"></div>
                 </div>
                 <div class="player-health-n-armor flex-all-center">
-                  <img src="./media/player-health-icon.svg" alt="" />
+                  <svg>
+                    <use
+                      href="./media/player-icons/player-icons.svg#health"
+                    ></use>
+                  </svg>
                   <p>100</p>
                   <div class="player-armor-n-helmet flex-all-center">
-                    <img src="./media/player-armor-icon.svg" alt="" />
-                    <img src="./media/player-helmet-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#armor"
+                      ></use>
+                    </svg>
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#helmet"
+                      ></use>
+                    </svg>
                   </div>
                 </div>
                 <div class="player-nickname">Player</div>
                 <div class="player-kills-n-deaths flex-all-center">
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#kills"
+                      ></use>
+                    </svg>
                     <p>2</p>
                   </div>
                   <div class="kills-n-deaths-values flex-all-center">
-                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <svg>
+                      <use
+                        href="./media/player-icons/player-icons.svg#deaths"
+                      ></use>
+                    </svg>
                     <p>0</p>
                   </div>
                 </div>
@@ -831,12 +1115,15 @@
               </div>
             </div>
             <div class="player-card-weapons flex-all-center t-border">
-              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <img src="./media/weapon-icons/Rifle/ak47.svg" alt="" />
               <div class="player-nades">
-                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
-                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
-                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
-                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/decoy.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/hegrenade.svg" alt="" />
+                <img src="./media/weapon-icons/Grenade/molotov.svg" alt="" />
+                <img
+                  src="./media/weapon-icons/Grenade/smokegrenade.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
