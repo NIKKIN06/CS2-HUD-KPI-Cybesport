@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+@function px-to-vw($pixels, $base-width: 1920)
+{
+    @return math.div($pixels, $base-width) * 100vw;
+}
+
+@function px-to-vh($pixels, $base-width: 1080)
+{
+    @return math.div($pixels, $base-width) * 100vh;
+}
+
+.absolute-horizontal-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-none
+{
+    display: none;
+}

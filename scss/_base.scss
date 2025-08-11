@@ -1,0 +1,22 @@
+html
+{
+    scrollbar-width: none;
+}
+
+body
+{
+    margin: 0;
+    background-image: url(../media/game.png);
+
+    font-family: 'Geologica', sans-serif;
+    font-weight: 900;
+    font-size: px-to-vw(20);
+    color: white;
+
+    font-variation-settings: "SHRP" 100;
+}
+
+p
+{
+    margin: 0;
+}

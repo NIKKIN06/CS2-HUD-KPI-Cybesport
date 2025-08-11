@@ -1,0 +1,217 @@
+.bomb-status-area
+{
+    width: px-to-vw(280);
+    height: px-to-vh(157);
+
+    position: absolute;
+    margin: px-to-vh(103) 50%;
+    transform: translate(-50%, 0);
+    
+    justify-content: start;
+    flex-direction: column;
+    gap: px-to-vh(6);
+}
+
+.orange-rounded-border
+{
+    border: 1px solid #ff9b54;
+    border-radius: px-to-vw(10);
+}
+
+.planted-bomb-timer
+{
+    width: px-to-vw(186);
+    height: px-to-vh(71);
+
+    position: relative;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translate(0, px-to-vh(50));
+
+    transition: transform 0.8s, opacity 0.75s;
+}
+
+.bomb-status-player:has(.t-bomb) {
+    transform: translate(0, px-to-vh(-27));
+}
+
+.planted-bomb-timer.show-element, .bomb-status-player.show-element:has(.ct-bomb)
+{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.bomb-status-player.show-element:has(.t-bomb)
+{
+    transform: translate(0, px-to-vh(-77));
+    opacity: 1;
+}
+
+.planted-bomb-timer.background-pattern::before
+{
+    background-size: 9.7%;
+    opacity: 0.2;
+}
+
+.background-container
+{
+    width: 100%;
+    height: 100%;
+    
+    background-color: var(--primary-background-dark-with-opacity-80);
+
+    flex-direction: column;
+    gap: px-to-vh(4);
+
+    position: relative;
+    z-index: 2;
+
+    font-family: 'Unbounded', sans-serif;
+    font-size: px-to-vw(16);
+}
+
+.planted-bomb-image
+{
+    width: 100%;
+    height: px-to-vh(20);
+
+    flex-direction: row;
+    gap: px-to-vw(10);
+}
+
+.planted-bomb-image > svg
+{
+    max-width: px-to-vw(20);
+    max-height: 100%;
+
+    fill: #ff9b54;
+    filter: drop-shadow(0 0 4px rgba(255, 155, 84, 0.8));
+}
+
+.planted-bomb-image::after
+{
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #ff9b54 50%, #ce4257 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 4px rgba(255, 155, 84, 0.7);
+}
+
+.planted-status.planted-bomb-image::after
+{
+    content: "planted";
+}
+
+.defused-status.planted-bomb-image::after
+{
+    content: "defused";
+}
+
+.planted-bomb-timer > div > p
+{
+    font-weight: 600;
+}
+
+.planted-bomb-progress-bar
+{
+    width: px-to-vw(150);
+    height: px-to-vh(3);
+
+    border-radius: px-to-vw(2);
+
+    background-color: #fff;
+
+    overflow: hidden;
+}
+
+.planted-bomb-progress-bar > div
+{
+    width: 100%;
+    height: 100%;
+
+    background-color: #FF9B54;
+
+    transition: width 1.0s;
+}
+
+.bomb-status-player
+{
+    width: 100%;
+    height: px-to-vh(80);
+
+    position: relative;
+    overflow: hidden;
+
+    transform: translate(0, px-to-vh(50));
+    opacity: 0;
+
+    transition: transform 0.8s, opacity 0.75s;
+}
+
+.bomb-status-player.background-pattern::before
+{
+    background-size: 6.4%;
+    opacity: 0.15;
+}
+
+.image-kit-box
+{
+    width: px-to-vw(20);
+    height: px-to-vh(20);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.ct-bomb > .image-kit-box
+{
+    background-image: url('../../media/defuse-kit-icon.svg');
+}
+
+.t-bomb > .image-kit-box
+{
+    background-image: url('../../media/c4-icon.svg');
+}
+
+.bomb-status-text
+{
+    flex-direction: column;
+
+    font-family: 'Geologica', sans-serif;
+    font-size: px-to-vw(16);
+    font-variation-settings: "SHRP" 0;
+
+    text-transform: uppercase;
+}
+
+.ct-bomb > .bomb-status-text > div,
+.t-bomb > .bomb-status-text > div
+{
+    text-decoration: underline;
+    position: relative;
+}
+
+.ct-bomb > .bomb-status-text > div::after
+{
+    content: "DEFUSING";
+    margin-left: px-to-vw(3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.t-bomb > .bomb-status-text > div::after
+{
+    content: "PLANTING";
+    margin-left: px-to-vw(3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.bomb-status-text > p
+{
+    color: #FF9B54;
+}

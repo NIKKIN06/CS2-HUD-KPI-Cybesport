@@ -1,0 +1,21 @@
+.advertisement {
+    position: absolute;
+
+    top: px-to-vh(28);
+    right: px-to-vw(35);
+
+    width: px-to-vw(244);
+    height: px-to-vh(139);
+}
+
+.advertisement-media {
+    position: absolute;
+
+    width: px-to-vw(214);
+    height: px-to-vh(109);
+}
+
+.advertisement img {
+    max-width: 100%;
+    max-height: 100%;
+}

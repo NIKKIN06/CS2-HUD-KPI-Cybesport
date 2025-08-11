@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS2 HUD</title>
+    <link rel="stylesheet" href="./css/hud_view.css" />
+  </head>
+  <body>
+    <div class="minimap">
+      <img src="./media/de_mirage_radar_psd.png" alt="" />
+    </div>
+    <div class="top-center-score flex-all-center absolute-horizontal-center">
+      <div class="team-name">
+        <div class="team-name-textbox ct-team flex-all-center">
+          <p class="team-name-text">Natus Vincere</p>
+        </div>
+        <div class="side-indicator ct transition"></div>
+        <p id="team-name-win-text" class="transition">Round win</p>
+      </div>
+      <div class="team-logo flex-all-center">
+        <img
+          class="team-logo-file"
+          src="https://img-cdn.hltv.org/teamlogo/9iMirAi7ArBLNU8p3kqUTZ.svg?ixlib=java-2.1.0&s=4dd8635be16122656093ae9884675d0c"
+          alt=""
+        />
+      </div>
+      <div class="team-score flex-all-center">
+        <div class="circles-of-victories">
+          <div class="match-victory-circle ct"></div>
+          <div class="match-victory-circle"></div>
+        </div>
+        <p class="team-score-number">13</p>
+      </div>
+      <div class="timer flex-all-center">
+        <div class="timer-status flex-all-center">
+          <p class="timer-text">01:60</p>
+          <img class="display-none" src="./media/c4-icon.svg" alt="" />
+          <img
+            class="display-none"
+            src="./media/expired-timer-icon.svg"
+            alt=""
+          />
+        </div>
+        <p class="round-name">ROUND</p>
+        <p class="round-number">24/24</p>
+      </div>
+      <div class="team-score flex-all-center">
+        <div class="circles-of-victories">
+          <div class="match-victory-circle t"></div>
+          <div class="match-victory-circle"></div>
+        </div>
+        <p class="team-score-number">6</p>
+      </div>
+      <div class="team-logo flex-all-center">
+        <img
+          class="team-logo-file"
+          src="https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=100&s=95466e17ba2af2a72ec28bd1af66ceee"
+          alt=""
+        />
+      </div>
+      <div class="team-name">
+        <div class="side-indicator t"></div>
+        <div class="team-name-textbox t-team flex-all-center">
+          <p class="team-name-text">Ninjas in Pijamas</p>
+        </div>
+      </div>
+    </div>
+    <div class="advertisement flex-all-center">
+      <div class="advertisement-media flex-all-center">
+        <img src="./media/KPI-Cybersport-logo-typescript-white.png" alt="" />
+      </div>
+      <img
+        class="advertisement-background"
+        src="./media/advertisiment-background.png"
+        alt=""
+      />
+    </div>
+    <div class="bomb-status-area flex-all-center">
+      <div
+        class="orange-rounded-border planted-bomb-timer background-pattern show-element"
+      >
+        <div class="background-container flex-all-center">
+          <div class="planted-bomb-image planted-status flex-all-center">
+            <!-- <img src="./media/c4-icon.svg" alt="" /> -->
+            <svg>
+              <use href="./media/player-icons.svg#c4"></use>
+            </svg>
+          </div>
+          <p>00:40</p>
+          <div class="planted-bomb-progress-bar flex-all-center">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="orange-rounded-border background-pattern bomb-status-player show-element"
+      >
+        <div class="background-container ct-bomb flex-all-center">
+          <div class="image-kit-box"></div>
+          <div class="bomb-status-text flex-all-center">
+            <div>Player</div>
+            <p>the bomb</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-players-line absolute-horizontal-center">
+      <div class="team">
+        <div class="player-card">
+          <div class="player-card-dead transition-dead">
+            <div class="player-info background-pattern ct-border">
+              <div class="player-info-background ct-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive transition-dead">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item flex-all-center">
+                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern ct ct-border">
+                <div class="player-info-background ct-background">
+                  <div class="player-health-bar ct-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center ct-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern ct-border">
+              <div class="player-info-background ct-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item flex-all-center">
+                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern ct ct-border">
+                <div class="player-info-background ct-background">
+                  <div class="player-health-bar ct-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center ct-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern ct-border">
+              <div class="player-info-background ct-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item flex-all-center">
+                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern ct ct-border">
+                <div class="player-info-background ct-background">
+                  <div class="player-health-bar ct-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center ct-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern ct-border">
+              <div class="player-info-background ct-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item flex-all-center">
+                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern ct ct-border">
+                <div class="player-info-background ct-background">
+                  <div class="player-health-bar ct-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center ct-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern ct-border">
+              <div class="player-info-background ct-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item flex-all-center">
+                  <img src="./media/ui_icons/defuser.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern ct ct-border">
+                <div class="player-info-background ct-background">
+                  <div class="player-health-bar ct-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center ct-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="active-player-space flex-all-center">
+        <div class="active-player-view background-pattern flex-all-center">
+          <div class="active-player-view-background"></div>
+          <img src="./media/player_silhouette.png" alt="" />
+        </div>
+        <div class="active-player-bottom-info flex-all-center">
+          <div class="active-player-body-info flex-all-center">
+            <img src="./media/player-health-icon.svg" alt="" />
+            <p>100</p>
+            <div class="player-armor-n-helmet flex-all-center">
+              <img src="./media/player-armor-icon.svg" alt="" />
+              <img src="./media/player-helmet-icon.svg" alt="" />
+            </div>
+            <img src="./media/ui_icons/defuser.svg" alt="" />
+          </div>
+          <div class="active-player-nickname">Player</div>
+          <div class="active-player-bullets flex-all-center">
+            <p>20/90</p>
+            <img src="./media/player-bullets-icon.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="team">
+        <div class="player-card">
+          <div class="player-card-dead transition-dead">
+            <div class="player-info background-pattern t-border">
+              <div class="player-info-background t-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive transition-dead">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item t-border flex-all-center">
+                  <img src="./media/bomb-icon.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item t-border flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern t t-border">
+                <div class="player-info-background t-background">
+                  <div class="player-health-bar t-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center t-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern t-border">
+              <div class="player-info-background t-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item t-border flex-all-center">
+                  <img src="./media/bomb-icon.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item t-border flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern t t-border">
+                <div class="player-info-background t-background">
+                  <div class="player-health-bar t-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center t-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern t-border">
+              <div class="player-info-background t-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item t-border flex-all-center">
+                  <img src="./media/bomb-icon.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item t-border flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern t t-border">
+                <div class="player-info-background t-background">
+                  <div class="player-health-bar t-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center t-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern t-border">
+              <div class="player-info-background t-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item t-border flex-all-center">
+                  <img src="./media/bomb-icon.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item t-border flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern t t-border">
+                <div class="player-info-background t-background">
+                  <div class="player-health-bar t-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center t-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="player-card">
+          <div class="player-card-dead">
+            <div class="player-info background-pattern t-border">
+              <div class="player-info-background t-background"></div>
+              <div class="player-dead-text flex-all-center">
+                <div class="player-nickname">DMG IN ROUND</div>
+                <div class="player-nickname">152</div>
+                <div></div>
+                <div class="player-nickname">Player</div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-card-alive">
+            <div class="player-card-state">
+              <div class="player-item-photo-kills">
+                <div class="player-item t-border flex-all-center">
+                  <img src="./media/bomb-icon.svg" alt="" />
+                </div>
+                <img
+                  class="absolute-horizontal-center"
+                  src="./media/player_silhouette.png"
+                  alt=""
+                />
+                <div class="player-item t-border flex-all-center">
+                  <p>5</p>
+                </div>
+              </div>
+              <div class="player-info background-pattern t t-border">
+                <div class="player-info-background t-background">
+                  <div class="player-health-bar t-bar"></div>
+                </div>
+                <div class="player-health-n-armor flex-all-center">
+                  <img src="./media/player-health-icon.svg" alt="" />
+                  <p>100</p>
+                  <div class="player-armor-n-helmet flex-all-center">
+                    <img src="./media/player-armor-icon.svg" alt="" />
+                    <img src="./media/player-helmet-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="player-nickname">Player</div>
+                <div class="player-kills-n-deaths flex-all-center">
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-kills-icon.svg" alt="" />
+                    <p>2</p>
+                  </div>
+                  <div class="kills-n-deaths-values flex-all-center">
+                    <img src="./media/player-deaths-icon.svg" alt="" />
+                    <p>0</p>
+                  </div>
+                </div>
+                <div class="player-money flex-all-center">
+                  <p>$</p>
+                  <p>16000</p>
+                </div>
+              </div>
+            </div>
+            <div class="player-card-weapons flex-all-center t-border">
+              <img src="./media/ui_icons/main_guns/ak47.svg" alt="" />
+              <div class="player-nades">
+                <img src="./media/ui_icons/nades/decoy.svg" alt="" />
+                <img src="./media/ui_icons/nades/hegrenade.svg" alt="" />
+                <img src="./media/ui_icons/nades/molotov.svg" alt="" />
+                <img src="./media/ui_icons/nades/smokegrenade.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

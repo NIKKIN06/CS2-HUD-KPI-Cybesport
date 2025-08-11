@@ -1,0 +1,224 @@
+.top-center-score {
+    flex-direction: row;
+    gap: px-to-vw(6);
+
+    top: px-to-vh(28);
+    z-index: 1;
+}
+
+.team-name {
+    width: px-to-vw(280);
+    height: px-to-vh(50);
+    border-radius: px-to-vw(8);
+
+    background-color: var(--primary-background-dark-with-opacity-80);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.team-name:has(.t-team)
+{
+    justify-content: end;
+}
+
+.team-name-textbox {
+    width: px-to-vw(226);
+    height: px-to-vh(50);
+}
+
+.team-name-textbox.ct-team {
+    margin-left: px-to-vw(16);
+}
+
+.team-name-textbox.t-team {
+    margin-right: px-to-vw(16);
+}
+
+.team-name-text {
+    height: px-to-vh(25);
+    opacity: 1;
+}
+
+.side-indicator {
+    width: px-to-vw(6);
+    height: px-to-vh(30);
+    border-radius: px-to-vw(3);
+
+    position: absolute;
+
+    opacity: 1;
+
+    will-change: transform, border-radius, width, height;
+    transition: border-radius 1.0s, width 1.0s, height 1.0s, transform 1.0s;
+    // transition-timing-function: ease-out;
+}
+
+.side-indicator.ct
+{
+    top: px-to-vh(10);
+    right: px-to-vw(16);
+}
+
+.side-indicator.t {
+    top: px-to-vh(10);
+    left: px-to-vw(16);
+}
+
+.side-indicator.ct.transition {
+    border-radius: px-to-vw(8);
+    width: px-to-vw(280);
+    height: px-to-vh(50);
+    transform: translate(px-to-vw(16), px-to-vh(-10));
+}
+
+.side-indicator.t.transition {
+    border-radius: px-to-vw(8);
+    width: px-to-vw(280);
+    height: px-to-vh(50);
+    transform: translate(px-to-vw(-16), px-to-vh(-10));
+}
+
+// .side-indicator.ct.transition:hover {           // видалити
+//     border-radius: px-to-vw(8);
+//     width: px-to-vw(280);
+//     height: px-to-vh(50);
+//     transform: translate(px-to-vw(16), px-to-vh(-10));
+// }
+
+.team-name > p
+{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-family: 'Unbounded', sans-serif;
+    font-size: px-to-vw(28);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: px-to-vh(50);
+
+    mask:
+        linear-gradient(#000 0 0),
+        linear-gradient(90deg, #000 50%, #0000 0) content-box 0% 0% / 184% 184% no-repeat;
+    mask-composite: exclude;
+    transition: 1.0s;
+}
+
+.team-name > p.transition
+{
+    mask-position: 110% 0%;
+}
+
+.team-logo {
+    width: px-to-vw(31);
+    height: px-to-vh(29);
+    border-radius: px-to-vw(8);
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    padding: px-to-vw(5);
+}
+
+.team-logo-file {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.team-score {
+    width: px-to-vw(45);
+    height: px-to-vh(69);
+    border-radius: px-to-vw(8);
+
+    background-color: var(--primary-background-dark-with-opacity-80);
+
+    flex-direction: column;
+}
+
+.circles-of-victories {
+    display: flex;
+    flex-direction: row;
+    gap: px-to-vw(4);
+}
+
+.match-victory-circle {
+    width: px-to-vw(8);
+    height: px-to-vh(8);
+
+    box-sizing: border-box;
+    border-radius: 100%;
+
+    background-color: transparent;
+    border: px-to-vw(2) solid white;
+}
+
+.ct {
+    box-shadow: 0 0 px-to-vw(5) 0 var(--color-ct-light);
+    background-color: var(--color-ct-light);
+}
+
+.t {
+    box-shadow: 0 0 px-to-vw(5) 0 var(--color-t-light);
+    background: var(--color-t-light);
+}
+
+.match-victory-circle.ct,
+.match-victory-circle.t {
+    border: 0 solid transparent;
+}
+
+.team-score-number {
+    font-size: px-to-vw(32);
+}
+
+.timer {
+    width: px-to-vw(84);
+    height: px-to-vh(69);
+
+    box-sizing: border-box;
+    border-radius: px-to-vw(8);
+    border-left: px-to-vw(2) solid #ff9b54;
+    border-right: px-to-vw(2) solid #ff9b54;
+
+    background-color: var(--primary-background-dark-with-opacity-80);
+
+    flex-direction: column;
+}
+
+.timer-status
+{
+    width: px-to-vw(60);
+    height: px-to-vh(25);
+
+    flex-direction: column;
+}
+
+.timer-status > img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.timer-text,
+.round-name,
+.round-number {
+    font-weight: 800;
+}
+
+.round-name,
+.round-number {
+    font-size: px-to-vw(12);
+}
+
+.round-name {
+    color: #ff7f51;
+}
